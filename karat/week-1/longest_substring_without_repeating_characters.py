@@ -10,6 +10,7 @@ def lengthOfLongestSubstring(self, s: str) -> int:
             lookup.remove(s[left])
             left += 1
         length = max(length, right - left + 1)
+        lookup.add(s[right])
         right += 1
 
     return length
