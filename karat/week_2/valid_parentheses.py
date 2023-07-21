@@ -19,7 +19,10 @@ class Solution:
         return not stack
 
 
-
+"""
+Time Complexity -> O(n)
+Space Complexity -> O(n)
+"""
 
 
 
