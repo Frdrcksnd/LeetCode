@@ -2,18 +2,27 @@
 
 
 class Solution:
-    def check(self, opening, closing):
-        if opening == "(" and closing == ")":
-            return True
-        elif opening == "[" and closing == "]":
-            return True
-        elif opening == "{" and closing == "}":
-            return True
-        else:
-            return False
 
     def isValid(self, s: str) -> bool:
-        s = list(s)
+        lookup = {"]": "[", ")": "(", "}": "{"}
+
+        stack = []
+
+        for c in s:
+            if c not in lookup:
+                stack.append(c)
+            elif stack and stack[-1] == lookup[c]:
+                stack.pop()
+            else:
+                return False
+
+        return not stack
+
+
+
+
+
+
 
 
 
