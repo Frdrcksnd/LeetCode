@@ -1,6 +1,7 @@
-def shuffle(nums)
+def shuffle(nums):
+    N = len(nums) - 1
     i = 0
-    j = n
+    j = N
     result = []
     while j < len(nums):
         result.append(nums[i])
@@ -8,6 +9,7 @@ def shuffle(nums)
         i += 1
         j += 1
     return result
+
 
 """
 Time Complexity => O(n)
